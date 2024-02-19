@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "RegistroTipoP";
+    Layout = "~/Views/Shared/AdminView.cshtml";
+}
+
+<head>
+    <title>Editorial</title>
+</head>
+<body>
+    <script>
+        var UrlGuardarTP = '@Url.Action("guardarTP", "Admin")'
+    </script>
+    <script src="~/Scripts/js_libros.js"></script>
+
+    <div class="container-fluid">
+        <div class="container-flat-form">
+            <div class="title-flat-form title-flat-blue">Registrar nuevo país</div>
+            <form autocomplete="off">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2" style="width: 800px; margin: 0 auto;">
+                        <div class="group-material">
+                            @if (ViewBag.Editorial != null)
+                            {
+                                <input type="text" id="tipoPre" class="material-control tooltips-general" required="" data-toggle="tooltip" value="@ViewBag.TipoPrestamo.ModeloPrestamo">
+                            }
+                            else
+                            {
+                                <input type="text" id="tipoPre" class="material-control tooltips-general" required="" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Modelo de prestamo</label>
+                        </div>
+                        <p class="text-center">
+                            <a href="javascript:guardarTP()" class="btn btn-outline-success">Guardar</a>
+                            <a href="~/admin/ListaEditorial" class="btn btn-outline-dark">Regresar</a>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

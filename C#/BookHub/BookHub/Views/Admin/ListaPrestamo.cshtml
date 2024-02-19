@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "ListaPrestamo";
+    Layout = "~/Views/Shared/AdminView.cshtml";
+}
+
+<head>
+    <title>Editoriales</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Shortcut Icon" type="image/x-icon" href="assets/icons/book.ico" />
+    <script src="js/sweet-alert.min.js"></script>
+</head>
+
+<script src="~/Scripts/js_libros.js"></script>
+<script>
+    var UrlBorrarPres = '@Url.Action("eliminarPres", "Admin")'
+</script>
+<div class="container-fluid">
+    <h2 class="text-center all-tittles" style="clear: both; margin: 25px 0;">Modelos de Prestamo</h2>
+    <a href="~/admin/RegistroPres" class="btn btn-outline-dark user-select-auto" data-placement="top">Nuevo prestamo</a>
+    <br>
+    <br>
+    <div class="div-table" style="margin:0 !important;">
+        <div class="div-table-row div-table-header" style="background-color:#DFF0D8; font-weight:bold;">
+            <div class="div-table-cell">Fecha del prestamo</div>
+            <div class="div-table-cell">Fecha de entrega</div>
+            <div class="div-table-cell">Nombre del cliente</div>
+            <div class="div-table-cell">Nombre del libro</div>
+            <div class="div-table-cell">Estado del prestamo</div>
+            <div class="div-table-cell"></div>
+        </div>
+
+        @foreach (var item in Model)
+        {
+            <div class="div-table-row div-table-row-list" id="fila-item.@item.idPrestamo">
+                <div class="div-table-cell">@item.Prestamo.fechaPrestamo.ToString("yyyy-MM-dd")</div>
+                <div class="div-table-cell">@item.Prestamo.fechaEntrega.ToString("yyyy-MM-dd")</div>
+                <div class="div-table-cell">@item.Prestamo.Cliente.nombresCliente @item.Prestamo.Cliente.apellidoPCliente @item.Prestamo.Cliente.apellidoMCliente</div>
+                <div class="div-table-cell">@item.Libro.tituloLibro</div>
+                @if (item.Activos == 1)
+                {
+                    <div class="div-table-cell">Sin entregar</div>
+                }
+                else
+                {
+                    <div class="div-table-cell">Entregado</div>
+                }
+                <div class="div-table-cell">
+                    <a href="javascript:eliminarPres(@item.idPrestamo)" class="btn btn-secondary">Entregado</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Categorias";
+    Layout = "~/Views/Shared/AdminView.cshtml";
+}
+
+<head>
+    <title>Tipos de libro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Shortcut Icon" type="image/x-icon" href="assets/icons/book.ico" />
+    <script src="js/sweet-alert.min.js"></script>
+</head>
+
+<script src="~/Scripts/js_libros.js"></script>
+<script>
+    var UrlBorrarTiLi = '@Url.Action("eliminarTiLi", "Admin")'
+</script>
+<div class="container-fluid">
+    <h2 class="text-center all-tittles" style="clear: both; margin: 25px 0;">Tipos de libro</h2>
+    <a href="~/admin/RegistroCategoria" class="btn btn-outline-dark user-select-auto" data-placement="top">Agregar Categoria</a>
+    <br>
+    <br>
+    <div class="div-table" style="margin:0 !important;">
+        <div class="div-table-row div-table-header" style="background-color:#DFF0D8; font-weight:bold;">
+            <div class="div-table-cell">Categoria</div>
+            <div class="div-table-cell">Imagen</div>
+            <div class="div-table-cell">Actualizar</div>
+            <div class="div-table-cell">Eliminar</div>
+        </div>
+
+        @foreach (var item in Model)
+        {
+            if (item.Activos == 1)
+            {
+                <div class="div-table-row div-table-row-list" id="fila-@item.idTipoLibro">
+                    <div class="div-table-cell">@item.tipo</div>
+                    <div class="div-table-cell">
+                        <img src="@Url.Action("MostrarImagenTL", "Admin", new { id = item.idTipoLibro })" width="100" height="100"/>
+                    </div>
+                    <div class="div-table-cell">
+                        <a href="~/admin/RegistroCategoria?idTiLi=@item.idTipoLibro" class="btn btn-success">Editar</a>
+                    </div>
+                    <div class="div-table-cell">
+                        <a href="javascript:eliminarTiLi(@item.idTipoLibro)" class="btn btn-danger">Eliminar</a>
+                    </div>
+                </div>
+            }
+        }
+
+    </div>
+</div>

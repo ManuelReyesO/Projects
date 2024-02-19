@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "RegistroPais";
+    Layout = "~/Views/Shared/AdminView.cshtml";
+}
+
+<head>
+    <title>Pais</title>
+</head>
+<body>
+    <script>
+        var UrlGuardarPais = '@Url.Action("guardarPais", "Admin")'
+    </script>
+    <script src="~/Scripts/js_libros.js"></script>
+
+    <div class="container-fluid">
+        <div class="container-flat-form">
+            <div class="title-flat-form title-flat-blue">Registrar nuevo país</div>
+            <form autocomplete="off">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2" style="width: 800px; margin: 0 auto;">
+
+                        <div class="group-material">
+                            @if (ViewBag.Pais != null)
+                            {
+                                <input type="text" id="Pais" class="material-control tooltips-general" required="" data-toggle="tooltip" value="@ViewBag.Pais.nombrePais">
+                            }
+                            else
+                            {
+                                <input type="text" id="Pais" class="material-control tooltips-general" required="" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Nombre del país</label>
+                        </div>                        
+                        <p class="text-center">
+                            <a href="javascript:guardarPais()" class="btn btn-outline-success">Guardar</a>
+                            <a href="~/admin/ListaPais" class="btn btn-outline-dark">Regresar</a>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+

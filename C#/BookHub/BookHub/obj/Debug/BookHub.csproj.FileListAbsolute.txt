@@ -1,0 +1,178 @@
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\BookHub.dll.config
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\BookHub.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\BookHub.pdb
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\csc.exe
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\csc.exe.config
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\csc.rsp
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\csi.exe
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\csi.exe.config
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\csi.rsp
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.AppContext.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.Console.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.IO.Compression.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.Net.Http.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.ValueTuple.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\vbc.exe
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\vbc.exe.config
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\vbc.rsp
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\VBCSCompiler.exe
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\Antlr3.Runtime.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\Newtonsoft.Json.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\System.Web.Helpers.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\System.Web.Mvc.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\System.Web.Optimization.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\System.Web.Razor.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\System.Web.WebPages.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\System.Web.WebPages.Razor.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\WebGrease.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\System.Web.Helpers.xml
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\System.Web.Mvc.xml
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\System.Web.Optimization.xml
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\System.Web.Razor.xml
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\System.Web.WebPages.xml
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\System.Web.WebPages.Razor.xml
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\Newtonsoft.Json.xml
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\Antlr3.Runtime.pdb
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Megaman567\Desktop\BookHub\BookHub\obj\Debug\BookHub.csproj.AssemblyReference.cache
+C:\Users\Megaman567\Desktop\BookHub\BookHub\obj\Debug\BookHub.csproj.CoreCompileInputs.cache
+C:\Users\Megaman567\Desktop\BookHub\BookHub\obj\Debug\BookHub.csproj.CopyComplete
+C:\Users\Megaman567\Desktop\BookHub\BookHub\obj\Debug\BookHub.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\obj\Debug\BookHub.pdb
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\EntityFramework.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\EntityFramework.SqlServer.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\EntityFramework.xml
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\EntityFramework.SqlServer.xml
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\System.Net.Http.Formatting.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\System.Web.Http.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\System.Web.Http.WebHost.dll
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\System.Net.Http.Formatting.xml
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\System.Web.Http.xml
+C:\Users\Megaman567\Desktop\BookHub\BookHub\bin\System.Web.Http.WebHost.xml
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\BookHub.dll.config
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\BookHub.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\BookHub.pdb
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\csc.exe
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\csc.exe.config
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\csc.rsp
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\csi.exe
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\csi.exe.config
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\csi.rsp
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.AppContext.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.Console.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.IO.Compression.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.Net.Http.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.ValueTuple.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\vbc.exe
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\vbc.exe.config
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\vbc.rsp
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\VBCSCompiler.exe
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\Antlr3.Runtime.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\EntityFramework.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\EntityFramework.SqlServer.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\Newtonsoft.Json.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\System.Net.Http.Formatting.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\System.Web.Helpers.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\System.Web.Http.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\System.Web.Http.WebHost.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\System.Web.Mvc.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\System.Web.Optimization.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\System.Web.Razor.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\System.Web.WebPages.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\System.Web.WebPages.Razor.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\WebGrease.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\EntityFramework.xml
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\EntityFramework.SqlServer.xml
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\System.Net.Http.Formatting.xml
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\System.Web.Http.xml
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\System.Web.Http.WebHost.xml
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\System.Web.Helpers.xml
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\System.Web.Mvc.xml
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\System.Web.Optimization.xml
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\System.Web.Razor.xml
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\System.Web.WebPages.xml
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\System.Web.WebPages.Razor.xml
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\Newtonsoft.Json.xml
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\Antlr3.Runtime.pdb
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\obj\Debug\BookHub.csproj.AssemblyReference.cache
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\obj\Debug\BookHub.csproj.CoreCompileInputs.cache
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\obj\Debug\BookHub.csproj.CopyComplete
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\obj\Debug\BookHub.dll
+C:\Users\Megaman567\Desktop\Escuela\Semestre 8\Analisis avanzados de desarrollo de software\BookHub\BookHub\obj\Debug\BookHub.pdb

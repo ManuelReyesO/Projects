@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "AsistenciaAdmin";
+    Layout = "~/Views/Shared/AdminView.cshtml";
+}
+
+<head>
+    <title>Usuarios Activos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Shortcut Icon" type="image/x-icon" href="assets/icons/book.ico" />
+</head>
+<body>
+    <div class="container-fluid">
+        <h2 class="text-center all-tittles" style="clear: both; margin: 25px 0;">Listado de Usuarios</h2>
+        <br>
+        <br>
+        <div class="div-table" style="margin:0 !important;">
+            <div class="div-table-row div-table-header" style="background-color:#DFF0D8; font-weight:bold;">
+                <div class="div-table-cell">Fecha</div>
+                <div class="div-table-cell">Nombre</div>
+                <div class="div-table-cell">Entrada</div>
+                <div class="div-table-cell">Salida</div>
+            </div>
+
+            @foreach (var item in Model)
+            {
+                <div class="div-table-row div-table-row-list" id="fila-@item.idChecada">
+                    <div class="div-table-cell">@item.fecha_es.ToString("yyyy-MM-dd")</div>
+                    <div class="div-table-cell">@item.Empleado.nombresEmpleado @item.Empleado.apellidoPEmpleado @item.Empleado.apellidoMEmpleado</div>
+                    @if (@item.entradaChecada != null)
+                    {
+                        <div class="div-table-cell">@item.entradaChecada.ToString()</div>
+                    }
+                    @if (@item.salidaChecada != null)
+                    {
+                        <div class="div-table-cell">@item.salidaChecada.ToString()</div>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</body>

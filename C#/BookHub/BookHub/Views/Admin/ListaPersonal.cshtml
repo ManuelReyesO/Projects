@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "ListaPersonal";
+    Layout = "~/Views/Shared/AdminView.cshtml";
+}
+<head>
+    <title>Personal administrativo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Shortcut Icon" type="image/x-icon" href="assets/icons/book.ico" />
+    <script src="js/sweet-alert.min.js"></script>
+</head>
+<body>
+    <script src="~/Scripts/js_personal.js"></script>
+    <script>
+        var UrlBorrarEmp = '@Url.Action("eliminarEmp", "Admin")'
+    </script>
+    <div class="container-fluid">
+        <h2 class="text-center all-tittles" style="clear: both; margin: 25px 0;">Listado de personal</h2>
+        <a href="~/admin/RegistroPersonal" class="btn btn-outline-dark user-select-auto" data-placement="top">Agregar Personal</a>
+        <br>
+        <br>
+        <div class="div-table" style="margin:0 !important;">
+            <div class="div-table-row div-table-header" style="background-color:#DFF0D8; font-weight:bold;">
+                <div class="div-table-cell">Nombre</div>
+                <div class="div-table-cell">Apellido Paterno</div>
+                <div class="div-table-cell">Apellido Materno</div>
+                <div class="div-table-cell">Dirección</div>
+                <div class="div-table-cell">Teléfono</div>
+                <div class="div-table-cell">Horario</div>
+                <div class="div-table-cell">Usuario</div>
+                <div class="div-table-cell">Contraseña</div>
+                <div class="div-table-cell">Actualizar</div>
+                <div class="div-table-cell">Eliminar</div>
+            </div>
+
+            @foreach (var item in Model)
+            {
+                if (item.Activos == 1)
+                {
+                    <div class="div-table-row div-table-row-list" id="fila-@item.idEmpleado">
+                        <div class="div-table-cell">@item.nombresEmpleado</div>
+                        <div class="div-table-cell">@item.apellidoPEmpleado</div>
+                        <div class="div-table-cell">@item.apellidoMEmpleado</div>
+                        <div class="div-table-cell">@item.direccionEmpleado</div>
+                        <div class="div-table-cell">@item.telefonoEmpleado</div>
+                        <div class="div-table-cell">@item.Horario.tipoHorario</div>
+                        <div class="div-table-cell">@item.usuarioEmp</div>
+                        <div class="div-table-cell">@item.contraseñaEmp</div>
+                        <div class="div-table-cell">
+                            <a href="~/admin/RegistroPersonal?idEmp=@item.idEmpleado&idHor=@item.idHorario" class="btn btn-success">Editar</a>
+                        </div>
+                        <div class="div-table-cell">
+                            <a href="javascript:eliminarEmp(@item.idEmpleado)" class="btn btn-danger">Eliminar</a>
+                        </div>
+                    </div>
+                }
+
+            }
+
+        </div>
+    </div>
+</body>
+

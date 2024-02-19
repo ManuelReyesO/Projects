@@ -1,0 +1,265 @@
+﻿
+@{
+    ViewBag.Title = "Car";
+    Layout = "~/Views/Shared/ClientView.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" href="../Content/Client/css/cart.css">
+</head>
+<script>
+        var UrlActCant = '@Url.Action("ActCant", "Cliente")'
+</script>
+<script>
+        var UrleliminarArt = '@Url.Action("eliminarArt", "Cliente")'
+</script>
+<script>
+        var UrleliminarP = '@Url.Action("eliminarP", "Cliente")'
+</script>
+<script>
+        var UrlTranscFinal = '@Url.Action("TranscFinal", "Cliente")'
+</script>
+<script src="~/Scripts/js_clientes.js"></script>
+
+<body>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="~/cliente/Books">BookHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="~/cliente/Books">Inicio</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Libros
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="~/cliente/Categories">Categorias</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="#!">Mas vistos</a></li>
+                            <li><a class="dropdown-item" href="#!">Nuevas adquisiciones</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <a class="btn btn-outline-dark" href="~/cliente/car">
+                        <i class="bi-cart-fill me-1"></i>
+                        Carrito
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">@Convert.ToInt16(ViewBag.Items)</span>
+                    </a>
+                    <a>&ensp;</a>
+                </form>
+                <ul class="navbar-nav d-flex">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Mi perfil
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="~/cliente/VistaUsuario">Ver perfil</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="#!">Eliminar cuenta</a></li>
+                            <li><a class="dropdown-item" href="~/home/login">Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="bg-dark py-5" style="height: 200px">
+        <div class="">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">Carrito compras/prestamo</h1>
+                <p class="lead fw-normal text-white-50 mb-0"></p>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="ibox">
+                        <div class="ibox-title">
+                            <span class="pull-right">(<strong>@Convert.ToInt16(ViewBag.ArtV)</strong>) Articulos</span>
+                            <h5>Carrito de Ventas</h5>
+                            <h6>Articulos en el carrito</h6>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="table-responsive">
+                                <table class="table shoping-cart-table">
+                                    <tbody>
+                                        <tr>
+                                            <td width="90">
+                                            </td>
+                                            <td class="desc">
+                                                <h6>
+                                                    Titulo del libro
+                                                </h6>
+                                            </td>
+                                            <td>
+                                                <h6>
+                                                    Precio unitario
+                                                </h6>
+                                            </td>
+                                            <td>
+                                                <h6>
+                                                    Cantidad
+                                                </h6>
+                                            </td>
+                                            <td>
+                                                <h6>
+                                                    Precio total
+                                                </h6>
+                                            </td>
+                                        </tr>
+                                        @foreach (var item in Model.carritoVentas)
+                                        {
+                                            if (ViewBag.idCliente == item.idCliente)
+                                            {
+                                                <tr>
+                                                    <td width="90">
+                                                        <div class="cart-product-imitation">
+                                                        </div>
+                                                    </td>
+                                                    <td class="desc">
+                                                        <h3>
+                                                            <label>@item.Libro.tituloLibro</label>
+                                                        </h3>
+
+                                                        <div class="m-t-sm">
+                                                            <a href="javascript:eliminarArt(@item.idCarritoVenta)" class="text-muted"><i class="fa fa-trash"></i> Eliminar articulo</a>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        $@item.Libro.precio.00
+                                                    </td>
+                                                    <td width="65">
+                                                        <input type="text" class="form-control" id="@item.idCarritoVenta" value="@item.cantidad">
+                                                        <a href="javascript:ActCant(@item.idCarritoVenta)">Actualizar</a>
+                                                    </td>
+                                                    <td>
+                                                        <h4>
+                                                            $@(item.Libro.precio * item.cantidad).00
+                                                        </h4>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="ibox">
+                        <div class="ibox-title">
+                            <h5>Costos totales</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <span>
+                                Total
+                            </span>
+                            <h2 class="font-bold">
+                                @foreach (var item in Model.carritoVentas)
+                                {
+                                    if (item.idCliente == ViewBag.idCliente)
+                                    {
+                                        ViewBag.Precio += (item.Libro.precio * item.cantidad);
+                                    }
+                                }
+
+                                $@ViewBag.Precio,00
+                            </h2>
+
+                            <hr>
+                            <div class="m-t-sm">
+                                <div class="btn-group">
+                                    <a href="javascript:TranscFinal()" class="btn btn-primary btn-sm"><i class="fa fa-shopping-cart"></i> Finalizar transacción</a>
+                                    <a href="#" class="btn btn-white btn-sm"> Regresar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="container">
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="ibox">
+                        <div class="ibox-title">
+                            <span class="pull-right">(<strong>@Convert.ToInt16(ViewBag.ArtP)</strong>) Articulos</span>
+                            <h5>Carrito de Prestamos</h5>
+                            <h6>Articulos en el carrito</h6>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="table-responsive">
+                                <table class="table shoping-cart-table">
+                                    <tbody>
+                                        <tr>
+                                            <td width="90">
+                                            </td>
+                                            <td class="desc">
+                                            </td>
+                                            <td>
+                                                <h6>
+                                                    Fecha del prestamo
+                                                </h6>
+                                            </td>
+                                            <td>
+                                                <h6>
+                                                    Fecha del prestamo
+                                                </h6>
+                                            </td>
+                                        </tr>
+                                        @foreach (var item in Model.carritoPrestamos)
+                                        {
+                                            if (item.idCliente == ViewBag.idCliente)
+                                            {
+                                                <tr>
+                                                    <td width="90">
+                                                        <div class="cart-product-imitation">
+                                                        </div>
+                                                    </td>
+                                                    <td class="desc">
+                                                        <h3>
+                                                            <label>@item.Libro.tituloLibro</label>
+                                                        </h3>
+
+                                                        <div class="m-t-sm">
+                                                            <a href="javascript:eliminarP(@item.idCarritoPrestamo)" class="text-muted"><i class="fa fa-trash"></i> Eliminar articulo</a>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <h7>
+                                                            @item.fechaPrestamo.ToString("yyyy-MM-dd")
+                                                        </h7>
+                                                    </td>
+                                                    <td>
+                                                        <h7>
+                                                            @item.fechaEntrega.ToString("yyyy-MM-dd")
+                                                        </h7>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+

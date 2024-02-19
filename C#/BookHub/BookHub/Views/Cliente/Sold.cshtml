@@ -1,0 +1,235 @@
+﻿
+@{
+    ViewBag.Title = "Sold";
+    Layout = "~/Views/Shared/ClientView.cshtml";
+}
+<link href="~/Content/HomePage/css/sold.css" rel="stylesheet">
+<link href="~/Content/HomePage/css/radios.css" rel="stylesheet">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - Product Card [JS + foundation]</title>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation-flex.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+</head>
+<body>
+    <script src="~/Scripts/js_clientes.js"></script>
+    <script>
+        var UrlCarrito = '@Url.Action("carrito", "Cliente")'
+    </script>
+
+    <!-- partial:index.partial.html -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="~/cliente/Books">BookHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="~/cliente/Books">Inicio</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Libros
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="~/cliente/Categories">Categorias</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="#!">Mas vistos</a></li>
+                            <li><a class="dropdown-item" href="#!">Nuevas adquisiciones</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <a class="btn btn-outline-dark" href="~/cliente/car">
+                        <i class="bi-cart-fill me-1"></i>
+                        Carrito
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">@Convert.ToInt16(ViewBag.Items)</span>
+                    </a>
+                    <a>&ensp;</a>
+                </form>
+                <ul class="navbar-nav d-flex">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Mi perfil
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="~/cliente/VistaUsuario">Ver perfil</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="#!">Eliminar cuenta</a></li>
+                            <li><a class="dropdown-item" href="~/home/login">Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="bg-dark py-5" style="height: 200px">
+        <div class="">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">BookHub</h1>
+                <p class="lead fw-normal text-white-50 mb-0">La cultura esta a un clic de distancia</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="row">
+        <div class="small- large-6 columns">
+            <div class="productCard_leftSide clearfix">
+
+                <div class="sliderBlock">
+                    <ul class="sliderBlock_items">
+                        <li class="sliderBlock_items__itemPhoto sliderBlock_items__showing">
+                            <img src="@Url.Action("MostrarImagenLib", "Admin", new { id = ViewBag.Libro.idLibro })" alt="headphones" style="height:400px">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="small-12 large-6 columns">
+            <div class="productCard_rightSide">
+                <div class="block_specification">
+                    <div class="block_specification__specificationShow">
+                        <i class="fa fa-cog block_specification__button block_specification__button__rotate"
+                           aria-hidden="true"></i>
+                        <span class="block_specification__text">Detalles</span>
+                    </div>
+                    <div class="block_specification__informationShow hide">
+                        <i class="fa fa-info-circle block_specification__button block_specification__button__jump"
+                           aria-hidden="true"></i>
+                        <span class="block_specification__text">Información</span>
+                    </div>
+                </div>
+
+                <p class="block_model">
+                    <span class="block_model__text">Edición: </span>
+                    <span class="block_model__number">@ViewBag.Libro.edicionLibro</span>
+                </p>
+
+                <div class="block_product">
+                    <h2 class="block_name block_name__mainName" id="lib">@ViewBag.Libro.tituloLibro</h2>
+                    <p class="block_product__advantagesProduct">
+                        Autor: @ViewBag.Libro.nombreAutor
+                    </p>
+
+                    <div class="block_informationAboutDevice">
+
+                        <div class="block_descriptionCharacteristic block_descriptionCharacteristic__disActive">
+                            <table class="block_specificationInformation_table">
+                                <tr>
+                                    <th colspan="2" style="text-align:center">Información del libro</th>
+                                </tr>
+                                <tr>
+                                    <td>Lanzamiento</td>
+                                    <td>@ViewBag.Libro.fechaLanzamiento.ToString("yyyy-MM-dd")</td>
+                                </tr>
+                                <tr>
+                                    <td>Editorial</td>
+                                    <td>@ViewBag.Editorial.nombreEditorial</td>
+                                </tr>
+                                <tr>
+                                    <td>País</td>
+                                    <td>@ViewBag.Pais.nombrePais</td>
+                                </tr>
+                                <tr>
+                                    <td>Categoria</td>
+                                    <td>@ViewBag.TipoLibro.tipo</td>
+                                </tr>
+                            </table>
+                        </div>
+                        @*<div class="block_rating clearfix">
+                                    <fieldset class="block_rating__stars">
+                                        <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5" title="Awesome - 5 stars"></label>
+                                        <input type="radio" id="star4half" name="rating"
+                                               value="4 and a half" /><label class="half" for="star4half"
+                                                                             title="Pretty good - 4.5 stars"></label>
+                                        <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4" title="Good - 4 stars"></label>
+                                        <input type="radio" id="star3half" name="rating"
+                                               value="3 and a half" /><label class="half" for="star3half"
+                                                                             title="Above average - 3.5 stars"></label>
+                                        <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3" title="Average - 3 stars"></label>
+                                        <input type="radio" id="star2half" name="rating"
+                                               value="2 and a half" /><label class="half" for="star2half"
+                                                                             title="Kinda bad - 2.5 stars"></label>
+                                        <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2"
+                                                                                                        title="Kinda bad - 2 stars"></label>
+                                        <input type="radio" id="star1half" name="rating"
+                                               value="1 and a half" /><label class="half" for="star1half"
+                                                                             title="Meh - 1.5 stars"></label>
+                                        <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1"
+                                                                                                        title="Sucks big time - 1 star"></label>
+                                        <input type="radio" id="starhalf" name="rating"
+                                               value="half" /><label class="half" for="starhalf"
+                                                                     title="Sucks big time - 0.5 stars"></label>
+                                    </fieldset>
+                            </div>*@
+
+                        <div class="row">
+                            <div class="large-6 small-12 column left-align">
+                                <div class="block_price">
+                                    <p class="block_price__currency">$@ViewBag.Libro.precio.00</p>
+                                    <p class="block_price__shipping">Stock: @ViewBag.Libro.stock</p>
+                                </div>
+                            </div>
+                            <div class="large-6 small-12 column left-align block_goodColor">
+                                <span class="text_specification">Qué desea realizar?</span>
+                                <div>
+                                    <div class="inputGroup">
+                                        <input id="radio1" name="radio" type="radio" value="prestamo" />
+                                        <label for="radio1">Prestamo</label>
+                                    </div>
+                                    <div class="inputGroup">
+                                        <input id="radio2" name="radio" type="radio" value="compra" />
+                                        <label for="radio2">Compra</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-6 small-12 column left-align"  id="row-id">
+                                <div class="block_quantity clearfix">
+                                    <span class="text_specification">Cantidad</span>
+                                    <div class="block_quantity__chooseBlock">
+                                        <input class="block_quantity__number" id="cantidad" name="quantityNumber" type="text" min="1" value="1">
+                                        <button class="block_quantity__button block_quantity__up" id="cantidad"></button>
+                                        <button class="block_quantity__button block_quantity__down" id="cantidad"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="large-6 small-12 column left-align">
+                                <br><br>
+                                <a class="button button_addToCard" href="javascript:carrito()">Añadir al carro</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- partial -->
+    <script src="~/Content/HomePage/js/script.js"></script>
+
+    <script>
+        var rowDiv = document.getElementById("row-id");
+        var radioPrestamo = document.getElementById("radio1");
+        var radioCompra = document.getElementById("radio2");
+        var inputCantidad = document.getElementById("cantidad");
+
+        radioPrestamo.addEventListener("change", function () {
+            inputCantidad.disabled = true;
+            rowDiv.style.pointerEvents = "none";
+            rowDiv.style.opacity = "0.5";
+        });
+
+        radioCompra.addEventListener("change", function () {
+            inputCantidad.disabled = false;
+            rowDiv.style.pointerEvents = "auto";
+            rowDiv.style.opacity = "1";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F16A6A"
+    tools:context=".Cuentas.Logros">
+    <TextView
+        android:id="@+id/tittleCuenta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Cuenta"
+        android:textColor="#FFFFFF"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleDatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:elevation="1dp"
+        android:gravity="center"
+        android:text="Logros"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/viewMenu" />
+
+
+    <View
+        android:id="@+id/viewMenu"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/corner_radius_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tittleCuenta" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/arch1"
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="50dp"
+        app:cardElevation="8dp"
+        app:layout_constraintStart_toStartOf="@id/viewMenu"
+        app:layout_constraintTop_toBottomOf="@id/titleDatos">
+
+        <ImageView
+            android:id="@+id/arcImg1"
+            android:layout_width="130dp"
+            android:layout_height="110dp"
+            android:background="@drawable/animalesnlogro"
+            />
+
+        <TextView
+            android:id="@+id/arcTxt1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:background="#66D10000"
+            android:textStyle="bold"
+            android:textColor="#ffff"
+            android:gravity="center"
+            android:text="Bloqueado" />
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/arch2"
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="40dp"
+        app:cardElevation="8dp"
+        app:layout_constraintStart_toEndOf="@id/arch1"
+        app:layout_constraintTop_toTopOf="@id/arch1"
+        tools:layout_editor_absoluteY="480dp">
+
+        <ImageView
+            android:id="@+id/arcImg2"
+            android:layout_width="130dp"
+            android:layout_height="110dp"
+            android:background="@drawable/frutasnlogro"
+            />
+
+        <TextView
+            android:id="@+id/arcTxt2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:background="#66D10000"
+            android:textStyle="bold"
+            android:textColor="#ffff"
+            android:text="Bloqueado" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/arch3"
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="28dp"
+        app:cardElevation="8dp"
+        app:layout_constraintStart_toStartOf="@id/arch1"
+        app:layout_constraintTop_toBottomOf="@id/arch1">
+
+        <ImageView
+            android:id="@+id/arcImg3"
+            android:layout_width="130dp"
+            android:layout_height="110dp"
+            android:background="@drawable/numerosnlogro"
+            />
+
+        <TextView
+            android:id="@+id/arcTxt3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:background="#66D10000"
+            android:textStyle="bold"
+            android:textColor="#ffff"
+            android:text="Bloqueado" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/arch4"
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="40dp"
+        app:cardElevation="8dp"
+        app:layout_constraintStart_toEndOf="@id/arch3"
+        app:layout_constraintTop_toTopOf="@id/arch3">
+
+        <ImageView
+            android:id="@+id/arcImg4"
+            android:layout_width="130dp"
+            android:layout_height="110dp"
+            android:background="@drawable/figurasnlogro"
+            />
+
+        <TextView
+            android:id="@+id/arcTxt4"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:background="#66D10000"
+            android:textStyle="bold"
+            android:textColor="#ffff"
+            android:text="Bloqueado" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/arch5"
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="24dp"
+        app:cardElevation="8dp"
+        app:layout_constraintStart_toStartOf="@+id/arch3"
+        app:layout_constraintTop_toBottomOf="@id/arch3">
+
+        <ImageView
+            android:id="@+id/arcImg5"
+            android:layout_width="130dp"
+            android:layout_height="110dp"
+            android:background="@drawable/memorianlogro"
+            />
+
+        <TextView
+            android:id="@+id/arcTxt5"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:background="#66D10000"
+            android:textStyle="bold"
+            android:textColor="#ffff"
+            android:text="Bloqueado" />
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/bottomViewMenu"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#F16A6A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/juegos"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="115dp"
+        android:background="@drawable/juegounselec"
+        app:layout_constraintBottom_toBottomOf="@id/bottomViewMenu"
+        app:layout_constraintStart_toStartOf="@id/bottomViewMenu"
+        app:layout_constraintTop_toTopOf="@+id/bottomViewMenu" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cuenta"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/userselec"
+        app:layout_constraintBottom_toBottomOf="@id/bottomViewMenu"
+        app:layout_constraintEnd_toEndOf="@+id/bottomViewMenu"
+        app:layout_constraintStart_toEndOf="@id/juegos"
+        app:layout_constraintTop_toTopOf="@+id/bottomViewMenu" />
+</androidx.constraintlayout.widget.ConstraintLayout>

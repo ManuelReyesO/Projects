@@ -1,0 +1,203 @@
+﻿
+@{
+    ViewBag.Title = "RegistroLibros";
+    Layout = "~/Views/Shared/AdminView.cshtml";
+}
+
+<head>
+    <title>Libros</title>
+</head>
+<body>
+    <script>
+        var UrlGuardarLib = '@Url.Action("guardarLib", "Admin")'
+    </script>
+    <script src="~/Scripts/js_libros.js"></script>
+
+    <div class="container-fluid">
+        <div class="container-flat-form">
+            <div class="title-flat-form title-flat-blue">Registrar nuevo Libro</div>
+            <form autocomplete="off">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2" style="width: 800px; margin: 0 auto;">
+
+                        <div class="group-material">
+                            @if (ViewBag.Libro != null)
+                            {
+                                <input type="text" id="titulo" class="material-control tooltips-general" required="" data-toggle="tooltip" value="@ViewBag.Libro.tituloLibro">
+                            }
+                            else
+                            {
+                                <input type="text" id="titulo" class="material-control tooltips-general" required="" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Titulo</label>
+                        </div>
+                        <div class="group-material">
+                            @if (ViewBag.Libro != null)
+                            {
+                                <input type="text" id="edicion" class="material-control tooltips-general" required="" data-toggle="tooltip" value="@ViewBag.Libro.edicionLibro">
+                            }
+                            else
+                            {
+                                <input type="text" id="edicion" class="material-control tooltips-general" required="" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Edición</label>
+                        </div>
+                        <div class="group-material">
+                            @if (ViewBag.Libro != null)
+                            {
+                                string fecha = @ViewBag.Libro.fechaLanzamiento.ToString("yyyy-MM-dd");
+                                <input type="date" id="fechaL" class="material-control tooltips-general" required="" data-toggle="tooltip" value="@fecha">
+                            }
+                            else
+                            {
+                                <input type="date" id="fechaL" class="material-control tooltips-general" required="" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Fecha de lanzamiento</label>
+                        </div>
+                        <div class="group-material">
+                            @if (ViewBag.Libro != null)
+                            {
+                                <input type="text" id="autor" class="material-control tooltips-general" required="" data-toggle="tooltip" value="@ViewBag.Libro.nombreAutor">
+                            }
+                            else
+                            {
+                                <input type="text" id="autor" class="material-control tooltips-general" required="" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Autor</label>
+                        </div>
+                        <label>Editorial</label>
+                        <div class="group-material">
+                            @if (ViewBag.Libro != null)
+                            {
+                                <select name="Editorial" id="editorial" class="material-control tooltips-general" required="" data-toggle="tooltip" style="margin-top: 5px;">
+                                    <option selected hidden>@ViewBag.Editorial.nombreEditorial</option>
+                                    @foreach (var item in ViewBag.edit)
+                                    {
+                                        <option>@item</option>
+                                    }
+                                </select>
+                            }
+                            else
+                            {
+                                <select name="Editorial" id="editorial" class="material-control tooltips-general" required="" data-toggle="tooltip" style="margin-top: 5px;">
+                                    <option selected disabled>- Seleccione una editorial -</option>
+                                    @foreach (var item in ViewBag.edit)
+                                    {
+                                        <option>@item</option>
+                                    }
+                                </select>
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                        </div>
+
+                        <label>País</label>
+                        <div class="group-material">
+                            @if (ViewBag.Libro != null)
+                            {
+                                <select name="Pais" id="pais" class="material-control tooltips-general" required="" data-toggle="tooltip" style="margin-top: 5px;">
+                                    <option selected hidden>@ViewBag.Pais.nombrePais</option>
+                                    @foreach (var item in ViewBag.entF)
+                                    {
+                                        <option>@item</option>
+                                    }
+                                </select>
+                            }
+                            else
+                            {
+                                <select name="Pais" id="pais" class="material-control tooltips-general" required="" data-toggle="tooltip" style="margin-top: 5px;">
+                                    <option selected disabled>- Seleccione un país -</option>
+                                    @foreach (var item in ViewBag.entF)
+                                    {
+                                        <option>@item</option>
+                                    }
+                                </select>
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                        </div>
+
+                        <label>Categoria</label>
+                        <div class="group-material">
+                            @if (ViewBag.Libro != null)
+                            {
+                                <select name="Categoria" id="categoria" class="material-control tooltips-general" required="" data-toggle="tooltip" style="margin-top: 5px;">
+                                    <option selected hidden>@ViewBag.TipoLibro.tipo</option>
+                                    @foreach (var item in ViewBag.tipos)
+                                    {
+                                        <option>@item</option>
+                                    }
+                                </select>
+                            }
+                            else
+                            {
+                                <select name="Horario" id="categoria" class="material-control tooltips-general" required="" data-toggle="tooltip" style="margin-top: 5px;">
+                                    <option selected disabled>- Seleccione una categoria -</option>
+                                    @foreach (var item in ViewBag.tipos)
+                                    {
+                                        <option>@item</option>
+                                    }
+                                </select>
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                        </div>
+                        <div class="group-material">
+                            @if (ViewBag.Libro != null)
+                            {
+                                <input type="text" id="stock" class="material-control tooltips-general" required="" data-toggle="tooltip" value="@ViewBag.Libro.stock">
+                            }
+                            else
+                            {
+                                <input type="text" id="stock" class="material-control tooltips-general" required="" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Stock</label>
+                        </div>
+                        <div class="group-material">
+                            @if (ViewBag.Libro != null)
+                            {
+                                <input type="text" id="precio" class="material-control tooltips-general" required="" data-toggle="tooltip" value="@ViewBag.Libro.precio">
+                            }
+                            else
+                            {
+                                <input type="text" id="precio" class="material-control tooltips-general" required="" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Precio</label>
+                        </div>
+                        <div class="group-material">
+                            @if (ViewBag.Libro != null)
+                            {
+                                <input type="file" id="portada" class="material-control tooltips-general" data-toggle="tooltip">
+                                <img src="@Url.Action("MostrarImagenLib", "Admin", new { id = ViewBag.Libro.idLibro })" width="100" height="100" />
+                            }
+                            else
+                            {
+                                <input type="file" id="portada" class="material-control tooltips-general" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Portada</label>
+                        </div>
+                        <p class="text-center">
+                            <a href="javascript:guardarLib()" class="btn btn-outline-success">Guardar</a>
+                            <a href="~/admin/ListaLibros" class="btn btn-outline-dark">Regresar</a>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+

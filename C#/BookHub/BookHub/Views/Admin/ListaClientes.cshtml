@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "ListaClientes";
+    Layout = "~/Views/Shared/AdminView.cshtml";
+}
+
+<head>
+    <title>Usuarios Activos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Shortcut Icon" type="image/x-icon" href="assets/icons/book.ico" />
+</head>
+<body>
+    <script src="~/Scripts/js_clientes.js"></script>
+    <script>
+        var UrlBorrarClint = '@Url.Action("eliminarClint", "Home")'
+    </script>
+    <div class="container-fluid">
+        <h2 class="text-center all-tittles" style="clear: both; margin: 25px 0;">Listado de Usuarios</h2>
+        <br>
+        <br>
+        <div class="div-table" style="margin:0 !important;">
+            <div class="div-table-row div-table-header" style="background-color:#DFF0D8; font-weight:bold;">
+                <div class="div-table-cell">Nombre</div>
+                <div class="div-table-cell">Apellido Paterno</div>
+                <div class="div-table-cell">Apellido Materno</div>
+                <div class="div-table-cell">Fecha de Nacimiento</div>
+                <div class="div-table-cell">Teléfono</div>
+                <div class="div-table-cell">Dirección</div>
+                <div class="div-table-cell">Usuario</div>
+                <div class="div-table-cell">Contraseña</div>
+                <div class="div-table-cell">Eliminar</div>
+            </div>
+
+            @foreach (var item in Model)
+            {
+                if (item.Activos == 1)
+                {
+                    <div class="div-table-row div-table-row-list" id="fila-@item.idCliente">
+                        <div class="div-table-cell">@item.nombresCliente</div>
+                        <div class="div-table-cell">@item.apellidoPCliente</div>
+                        <div class="div-table-cell">@item.apellidoMCliente</div>
+                        <div class="div-table-cell">@item.fechaNacimientoCliente.ToString("yyyy-MM-dd")</div>
+                        <div class="div-table-cell">@item.telefonoCliente</div>
+                        <div class="div-table-cell">@item.direccionCliente</div>
+                        <div class="div-table-cell">@item.usuarioCliente</div>
+                        <div class="div-table-cell">@item.contraseñaCliente</div>
+                        <div class="div-table-cell">
+                            <a href="javascript:eliminarClint(@item.idCliente)" class="btn btn-danger">Eliminar</a>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="ModalHelp">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title text-center all-tittles">ayuda del sistema</h4>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore dignissimos qui molestias ipsum officiis unde aliquid consequatur, accusamus delectus asperiores sunt. Quibusdam veniam ipsa accusamus error. Animi mollitia corporis iusto.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="zmdi zmdi-thumb-up"></i> &nbsp; De acuerdo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+

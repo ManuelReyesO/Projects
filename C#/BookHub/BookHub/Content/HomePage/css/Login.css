@@ -1,0 +1,168 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.panel-heading {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#forgot {
+    min-width: 100px;
+    margin-left: auto;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.form-inline label {
+    padding-left: 10px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.boton.boton-primario {
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.panel {
+    min-height: 380px;
+    box-shadow: 20px 20px 80px rgb(218, 218, 218);
+    border-radius: 12px;
+}
+
+.input-field {
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    color: #4343ff;
+}
+
+input[type='text'],
+input[type='password'] {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    width: 100%;
+}
+
+.fa-eye-slash.boton {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+a[target='_blank'] {
+    position: relative;
+    transition: all 0.1s ease-in-out;
+}
+
+.bordert {
+    border-top: 1px solid #aaa;
+    position: relative;
+}
+
+    .bordert:after {
+        content: "or connect with";
+        position: absolute;
+        top: -13px;
+        left: 33%;
+        background-color: #fff;
+        padding: 0px 8px;
+    }
+
+img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+}
+
+.boton {
+    display: inline-block;
+    width: 100%;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .boton {
+        transition: none;
+    }
+}
+
+.boton:hover {
+    color: #212529;
+}
+
+.boton-check:focus + .boton, .boton:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.boton:disabled, .boton.disabled, fieldset:disabled .boton {
+    pointer-events: none;
+    opacity: 0.65;
+}
+
+.boton-primario {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+    .boton-primario:hover {
+        color: #fff;
+        background-color: #0b5ed7;
+        border-color: #0a58ca;
+    }
+
+    .boton-check:focus + .boton-primario, .boton-primario:focus {
+        color: #fff;
+        background-color: #0b5ed7;
+        border-color: #0a58ca;
+        box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
+    }
+
+    .boton-check:checked + .boton-primario, .boton-check:active + .boton-primario, .boton-primario:active, .boton-primario.active, .show > .boton-primario.dropdown-toggle {
+        color: #fff;
+        background-color: #0a58ca;
+        border-color: #0a53be;
+    }
+
+        .boton-check:checked + .boton-primario:focus, .boton-check:active + .boton-primario:focus, .boton-primario:active:focus, .boton-primario.active:focus, .show > .boton-primario.dropdown-toggle:focus {
+            box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
+        }
+
+    .boton-primario:disabled, .boton-primario.disabled {
+        color: #fff;
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+    }

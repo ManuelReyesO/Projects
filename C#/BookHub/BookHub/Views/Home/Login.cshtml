@@ -1,0 +1,106 @@
+﻿<head>
+    <title>Personal administrativo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Shortcut Icon" type="image/x-icon" href="assets/icons/book.ico" />
+    <link href="../Content/HomePage/css/Login.css" rel="stylesheet" />
+    <script src="js/sweet-alert.min.js"></script>
+    <link rel="stylesheet" href="../Content/HomePage/css/sweet-alert.css">
+    <link rel="stylesheet" href="../Content/HomePage/css/style1.css">
+    <link href="../Content/HomePage/css/styles.css" rel="stylesheet" />
+</head>
+
+<script src="~/Scripts/js_clientes.js"></script>
+<script>
+        var Urllogin = '@Url.Action("inicioSesion", "Home")'
+</script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="~/home/Books">BookHub</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="~/home/Books">Inicio</a></li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Libros
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="~/home/Categories">Categorias</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Mas vistos</a></li>
+                        <li><a class="dropdown-item" href="#!">Nuevas adquisiciones</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <a class="btn btn-outline-dark" href="javascript:aviso()">
+                    <i class="bi-cart-fill me-1"></i>
+                    Carrito
+                    <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                </a>
+                <a>&ensp;</a>
+            </form>
+            <form class="nav-item">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Login
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="~/home/login">UserLog</a></li>
+                                <li><a class="dropdown-item" href="~/home/AdminLog">Adminlog</a></li>
+                                <li><a class="dropdown-item" href="~/home/Checadas">Asistencia</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
+<header class="bg-dark py-5" style="height: 200px">
+    <div class="">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Inicio de sesión</h1>
+        </div>
+    </div>
+</header>
+
+<div class="container" style="margin:50px auto;">
+    <div class="row">
+        <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+            <div class="panel border bg-white">
+                <div class="panel-heading">
+                    <h3 class="pt-3 font-weight-bold">Iniciar Sesión</h3>
+                </div>
+                <div class="panel-body p-3">
+                    <form action="login_script.php" method="POST">
+                        <div class="form-group py-2">
+                            <div class="input-field">
+                                <span class="far fa-user p-2"></span>
+                                <input type="text" placeholder="Usuario" required id="user">
+                            </div>
+                        </div>
+                        <div class="form-group py-1 pb-2">
+                            <div class="input-field">
+                                <span class="fas fa-lock px-2"></span>
+                                <input type="password" placeholder="Contraseña" required id="pass">
+                            </div>
+                        </div>
+                        <div>
+                            <a href="javascript:inicioSesion()" class="boton boton-primario" style="width:490px auto">Iniciar Sesión</a>
+                        </div>
+                        <div class="text-center pt-4 text-muted">
+                            No tienes cuenta con nosotros?  <a href="~/home/RegistroClientes">Registrate aquí.</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

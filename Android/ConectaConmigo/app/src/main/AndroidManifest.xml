@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/cc_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/cc_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ConectaConmigo"
+        tools:targetApi="31"
+        >
+
+        <activity
+            android:name=".InitialActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Cuentas.Logros"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Cuentas.EditarCuenta"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Cuentas.Cuenta"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Draw.Star"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Juegos.FormsGame"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Juegos.TwinsGame"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Juegos.NumberGame"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Juegos.DrawLetterGame"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Juegos.WhatFruitThis"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Juegos.WhatSoundAnimal"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Menu"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Inicio.InicioSesion"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Inicio.Registro"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Main"
+            android:exported="false"
+            android:screenOrientation="portrait">
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1056520474865",
+    "project_id": "conectaconmigo-7b914",
+    "storage_bucket": "conectaconmigo-7b914.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1056520474865:android:21d04697df2e1b790b5950",
+        "android_client_info": {
+          "package_name": "com.example.conectaconmigo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArB8cdrF6SpRzvvS-S7Q0hy36bXPr0w04"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

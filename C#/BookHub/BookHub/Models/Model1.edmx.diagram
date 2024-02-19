@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d2c78fb570ad4841877940414dc46ea2" Name="Diagram1">
+        <EntityTypeShape EntityType="BibliotecaModel.carritoPrestamo" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotecaModel.carritoVenta" Width="1.5" PointX="5.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotecaModel.Checada" Width="1.5" PointX="6" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotecaModel.Cliente" Width="1.5" PointX="3.75" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotecaModel.DetallePrestamo" Width="1.5" PointX="8.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotecaModel.DetalleVenta" Width="1.5" PointX="8.25" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotecaModel.Editorial" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotecaModel.Empleado" Width="1.5" PointX="3.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotecaModel.Horario" Width="1.5" PointX="1.5" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotecaModel.Libro" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotecaModel.Pai" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotecaModel.Prestamo" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotecaModel.TipoLibro" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotecaModel.TipoPrestamo" Width="1.5" PointX="3.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotecaModel.Venta" Width="1.5" PointX="6" PointY="16.125" IsExpanded="true" />
+        <AssociationConnector Association="BibliotecaModel.FK_carritoPrestamo_Libro" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_carritoVenta_Libro" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_Checadas_Empleado" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_Prestamo_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_Ventas_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_DetallePrestamo_Libro" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_DetallePrestamo_Prestamo" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_DetalleVenta_Libro" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_DetalleVenta_Ventas" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_Libro_Editorial" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_Empleado_Horarios" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_Prestamo_Empleado" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_Ventas_Empleado" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_Libro_Pais" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_Libro_TipoLibro" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotecaModel.FK_Prestamo_TipoPrestamo" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

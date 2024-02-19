@@ -1,0 +1,120 @@
+﻿
+@{
+    ViewBag.Title = "Comics";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link href="~/Content/HomePage/css/Libros.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body style="background-image:url('../../Content/Imagenes/Comics (2).jpg'); background-size:cover; background-repeat:no-repeat; background-attachment:fixed">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="~/home/Books">BookHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="~/home/Books">Inicio</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Libros
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="~/home/Categories">Categorias</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="#!">Mas vistos</a></li>
+                            <li><a class="dropdown-item" href="#!">Nuevas adquisiciones</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <a class="btn btn-outline-dark" href="javascript:aviso()">
+                        <i class="bi-cart-fill me-1"></i>
+                        Carrito
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    </a>
+                    <a>&ensp;</a>
+                </form>
+                <form class="nav-item">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Login
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="~/home/login">UserLog</a></li>
+                                    <li><a class="dropdown-item" href="~/home/AdminLog">Adminlog</a></li>
+                                    <li><a class="dropdown-item" href="~/home/Checadas">Asistencia</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <header class="bg-dark py-5" style="height: 200px">
+        <div class="">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">Categoria: Comics</h1>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container page-wrapper">
+        <div class="page-inner">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    if (item.TipoLibro.tipo == "Comics")
+                    {
+                        <div class="el-wrapper">
+                            <div class="box-up" style=" background-color: #F0F0F0; height: 300px; width: 330px;">
+                                <img class="img" src="@Url.Action("MostrarImagenLib", "Admin", new { id = item.idLibro })" alt="" style="width:130px;">
+                                <div class="img-info">
+                                    <div class="info-inner">
+                                        @if (item.TipoLibro.tipo == "Comics" || item.TipoLibro.tipo == "Mangas")
+                                        {
+                                            <span class="p-name">@item.tituloLibro @item.edicionLibro</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="p-name">@item.tituloLibro</span>
+                                        }
+                                        <span class="p-company">Yeezy</span>
+                                    </div>
+                                    @if (item.stock == 0)
+                                    {
+                                        <div class="a-size">Estado: <span class="size">No disponible</span></div>
+                                    }
+                                    else
+                                    {
+                                        <div class="a-size">Estado: <span class="size">Disponible</span></div>
+                                    }
+                                </div>
+                            </div>
+
+                            <div class="box-down">
+                                <div class="h-bg">
+                                    <div class="h-bg-inner"></div>
+                                </div>
+
+                                <a class="cart" href="~/home/Sold?idLib=@item.idLibro&idTiLi=@item.idTipoLibro&idEdit=@item.idEditorial&idPais=@item.idPais">
+                                    <span class="add-to-cart">
+                                        <span class="txt">Ver mas</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</body>

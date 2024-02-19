@@ -1,0 +1,32 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Megaman567/Desktop/ConectaConmigo/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1575" />
+        <entry key="..\:/Users/Megaman567/Desktop/ConectaConmigo/app/src/main/res/drawable-v24/rounded_button_background_v2.xml" value="0.2955" />
+        <entry key="..\:/Users/Megaman567/Desktop/ConectaConmigo/app/src/main/res/drawable/button_selector.xml" value="0.22" />
+        <entry key="..\:/Users/Megaman567/Desktop/ConectaConmigo/app/src/main/res/drawable/corner_radius_background.xml" value="0.2245" />
+        <entry key="..\:/Users/Megaman567/Desktop/ConectaConmigo/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1575" />
+        <entry key="..\:/Users/Megaman567/Desktop/ConectaConmigo/app/src/main/res/drawable/rounded_button_background.xml" value="0.2915" />
+        <entry key="..\:/Users/Megaman567/Desktop/ConectaConmigo/app/src/main/res/layout/activity_inicio_sesion.xml" value="0.25" />
+        <entry key="..\:/Users/Megaman567/Desktop/ConectaConmigo/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Megaman567/Desktop/ConectaConmigo/app/src/main/res/layout/activity_menu.xml" value="0.142368533561351" />
+        <entry key="..\:/Users/Megaman567/Desktop/ConectaConmigo/app/src/main/res/layout/activity_registro.xml" value="0.2877297990594271" />
+        <entry key="..\:/Users/Megaman567/Desktop/ConectaConmigo/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.182" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.5207631874298541" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

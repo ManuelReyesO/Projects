@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F16A6A"
+    tools:context=".Menu">
+
+    <TextView
+        android:id="@+id/tittleMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="¡Bienvenido!"
+        android:textColor="#FFFFFF"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subtittleMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Escoge una opción para comenzar"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tittleMenu" />
+
+    <View
+        android:id="@+id/viewMenu"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/corner_radius_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtittleMenu" />
+
+
+    <TextView
+        android:id="@+id/subtittleViewMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Conecta Conmigo"
+        android:textColor="#F16A6A"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/buttonAnimals"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/viewMenu" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonAnimals"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_animal"
+        app:layout_constraintEnd_toStartOf="@id/buttonFruits"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtittleViewMenu" />
+    <TextView
+        android:id="@+id/tittleAnimals"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Animales"
+        android:textColor="#F16A6A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/buttonAnimals"
+        app:layout_constraintStart_toStartOf="@id/buttonAnimals"
+        app:layout_constraintEnd_toEndOf="@id/buttonAnimals"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonFruits"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/button_fruit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/buttonAnimals"
+        app:layout_constraintTop_toTopOf="@id/buttonAnimals" />
+    <TextView
+        android:id="@+id/titleFriuts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Frutas"
+        android:textColor="#F16A6A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/buttonFruits"
+        app:layout_constraintStart_toStartOf="@id/buttonFruits"
+        app:layout_constraintEnd_toEndOf="@id/buttonFruits"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonNumbers"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_number"
+        app:layout_constraintStart_toStartOf="@id/buttonFruits"
+        app:layout_constraintTop_toBottomOf="@id/buttonFruits" />
+    <TextView
+        android:id="@+id/tittleNumbers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Números"
+        android:textColor="#F16A6A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/buttonNumbers"
+        app:layout_constraintStart_toStartOf="@id/buttonNumbers"
+        app:layout_constraintEnd_toEndOf="@id/buttonNumbers"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonMemory"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/button_memory"
+        app:layout_constraintBottom_toTopOf="@+id/bottomViewMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tittleMemory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Memoria"
+        android:textColor="#F16A6A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/buttonMemory"
+        app:layout_constraintStart_toStartOf="@id/buttonMemory"
+        app:layout_constraintEnd_toEndOf="@id/buttonMemory"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonForms"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_forms"
+        app:layout_constraintStart_toStartOf="@id/buttonAnimals"
+        app:layout_constraintTop_toBottomOf="@id/buttonAnimals" />
+
+    <TextView
+        android:id="@+id/tittleForms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Formas"
+        android:textColor="#F16A6A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/buttonForms"
+        app:layout_constraintStart_toStartOf="@id/buttonForms"
+        app:layout_constraintEnd_toEndOf="@id/buttonForms"
+        />
+
+    <View
+        android:id="@+id/bottomViewMenu"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#F16A6A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/juegos"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="115dp"
+        android:background="@drawable/juegoselec"
+        app:layout_constraintBottom_toBottomOf="@id/bottomViewMenu"
+        app:layout_constraintStart_toStartOf="@id/bottomViewMenu"
+        app:layout_constraintTop_toTopOf="@+id/bottomViewMenu" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cuenta"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/userunselec"
+        app:layout_constraintBottom_toBottomOf="@id/bottomViewMenu"
+        app:layout_constraintEnd_toEndOf="@+id/bottomViewMenu"
+        app:layout_constraintStart_toEndOf="@id/juegos"
+        app:layout_constraintTop_toTopOf="@+id/bottomViewMenu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

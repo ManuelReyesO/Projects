@@ -1,0 +1,156 @@
+﻿
+@{
+    ViewBag.Title = "RegistroPersonal";
+    Layout = "~/Views/Shared/AdminView.cshtml";
+}
+
+<head>
+    <title>Personal administrativo</title>
+</head>
+<body>
+    <script>
+        var UrlGuardarEmp = '@Url.Action("guardarEmp", "Admin")'
+    </script>
+    <script src="~/Scripts/js_personal.js"></script>
+
+    <div class="container-fluid">
+        <div class="container-flat-form">
+            <div class="title-flat-form title-flat-blue">Registrar nuevo personal administrativo</div>
+            <form autocomplete="off">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2" style="width: 800px; margin: 0 auto;">
+
+                        <div class="group-material">
+                            @if (ViewBag.Empleado != null)
+                            {
+                                <input type="text" id="nombre" class="material-control tooltips-general" required="" data-toggle="tooltip" value="@ViewBag.Empleado.nombresEmpleado">
+                            }
+                            else
+                            {
+                                <input type="text" id="nombre" class="material-control tooltips-general" required="" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Nombres</label>
+                        </div>
+                        <div class="group-material">
+                            @if (ViewBag.Empleado != null)
+                            {
+                                <input type="text" id="apePEmp" class="material-control tooltips-general" required="" data-toggle="tooltip" value="@ViewBag.Empleado.apellidoPEmpleado">
+                            }
+                            else
+                            {
+                                <input type="text" id="apePEmp" class="material-control tooltips-general" required="" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Apellido Paterno</label>
+                        </div>
+                        <div class="group-material">
+                            @if (ViewBag.Empleado != null)
+                            {
+                                <input type="text" id="apeMEmp" class="material-control tooltips-general" required="" data-toggle="tooltip" value="@ViewBag.Empleado.apellidoMEmpleado">
+                            }
+                            else
+                            {
+                                <input type="text" id="apeMEmp" class="material-control tooltips-general" required="" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Apellido Materno</label>
+                        </div>
+                        <div class="group-material">
+                            @if (ViewBag.Empleado != null)
+                            {
+                                <input type="text" id="dirEmp" class="material-control tooltips-general" required="" data-toggle="tooltip" value="@ViewBag.Empleado.direccionEmpleado">
+                            }
+                            else
+                            {
+                                <input type="text" id="dirEmp" class="material-control tooltips-general" required="" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Dirección</label>
+                        </div>
+                        <div class="group-material">
+                            @if (ViewBag.Empleado != null)
+                            {
+                                <input type="text" id="telEmp" class="material-control tooltips-general" required="" data-toggle="tooltip" value="@ViewBag.Empleado.telefonoEmpleado">
+                            }
+                            else
+                            {
+                                <input type="text" id="telEmp" class="material-control tooltips-general" required="" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Teléfono</label>
+                        </div>
+
+                        <div class="group-material">
+                            @if (ViewBag.Empleado != null)
+                            {
+                                <input type="text" id="userEmp" class="material-control tooltips-general" required="" data-toggle="tooltip" value="@ViewBag.Empleado.usuarioEmp">
+                            }
+                            else
+                            {
+                                <input type="text" id="userEmp" class="material-control tooltips-general" required="" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Usuario</label>
+                        </div>
+
+                        <div class="group-material">
+                            @if (ViewBag.Empleado != null)
+                            {
+                                <input type="text" id="contEmp" class="material-control tooltips-general" required="" data-toggle="tooltip" value="@ViewBag.PassEmp">
+                            }
+                            else
+                            {
+                                <input type="text" id="contEmp" class="material-control tooltips-general" required="" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Contraseña</label>
+                        </div>
+
+                        <label style="display: block; margin-bottom: 5px; font: normal; color: #e44626">Horarios</label>
+
+                        <div class="group-material">
+                            @if (ViewBag.Empleado != null)
+                            {
+                                <select name="Horario" id="horEmp" class="material-control tooltips-general" data-ng-required="" style="margin-top: 5px;">
+
+                                    @if (ViewBag.Empleado.idHorario == 1)
+                                    {
+                                        <option>Matutino</option>
+                                        <option>Vespertino</option>
+                                    }
+                                    else if (ViewBag.Empleado.idHorario == 2)
+                                    {
+                                        <option>Vespertino</option>
+                                        <option>Matutino</option>
+                                    }
+                                </select>
+                            }
+                            else
+                            {
+                                <select name="Horario" id="horEmp" class="material-control tooltips-general" required="" data-toggle="tooltip" style="margin-top: 5px;">
+                                    <option selected disabled>- Seleccione un Turno -</option>
+                                    <option>Matutino</option>
+                                    <option>Vespertino</option>
+                                </select>
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                        </div>
+                        <p class="text-center">
+                            <a href="javascript:guardarEmp()" class="btn btn-outline-success">Guardar</a>
+                            <a href="~/admin/ListaPersonal" class="btn btn-outline-dark">Regresar</a>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

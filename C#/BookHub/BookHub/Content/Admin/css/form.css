@@ -1,0 +1,150 @@
+﻿/*Contenedores de formularios ================*/
+.container-flat-form{
+    width: 98%;
+    margin: 25px auto;
+    box-shadow: 0 0 3px rgba(0,0,0,.2);
+    border-radius: 5px;
+    position: relative;
+    padding-bottom: 25px;
+}
+.title-flat-form{
+   background-color: #E34724;
+   height: 50px;
+   color: #fff;
+   text-align: center;
+   font-size: 25px;
+   line-height: 50px;
+   border-radius: 5px 5px 0 0;
+   margin-bottom: 50px;
+}
+.title-flat-green{
+   background-color: #16a085;
+}
+.title-flat-blue{
+   background-color: #3598D9;
+}
+/*Controles de formularios material desing ================*/
+.group-material {
+    position: relative;
+    margin-bottom: 45px;
+}
+input.material-control,
+select.material-control{
+  font-size:16px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:100%;
+  border:none;
+  border-bottom:1px solid #5264AE;
+}
+select.material-control,
+select.no-style{
+    -ms-appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: #fff url(../assets/icons/SelectMaterialIndicator.png) no-repeat scroll right 0.75rem center / 9px 13px;
+}
+select.material-control:hover,
+select.no-style{
+    cursor: pointer;
+}
+/*Estado activo*/
+input.material-control:focus,
+select.material-control{ 
+    outline:none;
+    border-bottom:1px solid #5264AE;
+}
+/*Label de formularios material desing ================*/
+.group-material label{
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition: all 0.2s ease; 
+  -moz-transition: all 0.2s ease; 
+  -webkit-transition: all 0.2s ease;
+}
+/* Estado activo */
+input.material-control:focus ~ label, 
+input.material-control:valid ~ label{
+  top:-20px;
+  font-size:17px;
+  font-weight: 700;
+  color:#333;
+  font-weight: normal;
+}
+input.material-control:valid ~ label:before{
+    content: "✓   "
+}
+input.material-control:focus:invalid ~ label,
+input.material-control:invalid ~ label{
+  top:-20px;
+  font-size:17px;
+  color: #E34724;
+  font-weight: normal;
+}
+input.material-control:focus:invalid ~ label:after{
+    content: "Formato no válido o campo vacío";
+    margin: 0 5px;
+    padding: 0 5px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #E34724;
+    border-radius: 4px;
+    font-weight: normal;
+}
+input.material-control:focus:invalid:required,
+input.material-control:invalid:required{
+  outline: none;
+  box-shadow: none;
+}
+/*Barra de formularios material desing ================*/
+.bar{ position:relative; display:block; width:100%; }
+.bar:before, .bar:after     {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#5264AE; 
+  transition: all 0.2s ease; 
+  -moz-transition: all 0.2s ease; 
+  -webkit-transition: all 0.2s ease;
+}
+.bar:before { left:50%; }
+.bar:after { right:50%; }
+input.material-control:focus ~ .bar:before, input.material-control:focus ~ .bar:after {
+  width:50%;
+}
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+/* estado activo*/
+input.material-control:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+/* Animaciones ================ */
+@-webkit-keyframes inputHighlighter {
+    from { background:#5264AE; }
+  to    { width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+    from { background:#5264AE; }
+  to    { width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+    from { background:#5264AE; }
+  to    { width:0; background:transparent; }
+}

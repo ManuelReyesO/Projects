@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F16A6A"
+    tools:context=".Cuentas.Cuenta">
+
+    <TextView
+        android:id="@+id/tittleCuenta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Cuenta"
+        android:textColor="#FFFFFF"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleDatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:elevation="1dp"
+        android:gravity="center"
+        android:text="Datos de perfil"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/viewMenu" />
+
+
+    <View
+        android:id="@+id/viewMenu"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/corner_radius_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tittleCuenta" />
+
+    <ImageView
+        android:id="@+id/fotoPerf"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="84dp"
+
+        android:background="@drawable/pajarito"
+        app:layout_constraintStart_toStartOf="@id/viewMenu"
+        app:layout_constraintTop_toTopOf="@+id/viewMenu" />
+
+    <TextView
+        android:id="@+id/UserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="128dp"
+        android:text="Nombre"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="@+id/fotoPerf"
+        app:layout_constraintStart_toEndOf="@+id/fotoPerf" />
+
+    <TextView
+        android:id="@+id/UserAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="128dp"
+        android:layout_marginTop="15dp"
+        android:text="Edad"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/UserName"
+        app:layout_constraintStart_toEndOf="@+id/fotoPerf" />
+
+    <TextView
+        android:id="@+id/UserMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="128dp"
+        android:layout_marginTop="15dp"
+        android:text="Correo"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/UserAge"
+        app:layout_constraintStart_toEndOf="@+id/fotoPerf" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonLogout"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/button_selector"
+        android:text="Cerrar sesión"
+        android:textColor="#F16A6A"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/viewMenu"
+        app:layout_constraintTop_toBottomOf="@id/UserMail" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/editAccount"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="232dp"
+        android:background="@drawable/button_selector"
+        android:text="Editar perfil"
+        android:textColor="#F16A6A"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/viewMenu"
+        app:layout_constraintTop_toBottomOf="@id/UserMail" />
+
+    <TextView
+        android:id="@+id/titleLogros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:elevation="1dp"
+        android:gravity="center"
+        android:text="Logros"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/viewMenu"
+        app:layout_constraintTop_toBottomOf="@id/fotoPerf" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ArchStars"
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toEndOf="@id/ArchLevls"
+        app:layout_constraintTop_toBottomOf="@id/titleLogros">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="Logro 2" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ArchLevls"
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="@id/viewMenu"
+        app:layout_constraintTop_toBottomOf="@id/titleLogros">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="Logro 1" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonArch"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#F16A6A"
+        android:text="Ver mas"
+        android:background="@drawable/button_selector"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/ArchLevls"
+        app:layout_constraintStart_toStartOf="@+id/viewMenu"
+        app:layout_constraintEnd_toEndOf="@+id/viewMenu" />
+
+    <View
+        android:id="@+id/bottomViewMenu"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#F16A6A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/juegos"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="115dp"
+        android:background="@drawable/juegounselec"
+        app:layout_constraintBottom_toBottomOf="@id/bottomViewMenu"
+        app:layout_constraintStart_toStartOf="@id/bottomViewMenu"
+        app:layout_constraintTop_toTopOf="@+id/bottomViewMenu" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cuenta"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/userselec"
+        app:layout_constraintBottom_toBottomOf="@id/bottomViewMenu"
+        app:layout_constraintEnd_toEndOf="@+id/bottomViewMenu"
+        app:layout_constraintStart_toEndOf="@id/juegos"
+        app:layout_constraintTop_toTopOf="@+id/bottomViewMenu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

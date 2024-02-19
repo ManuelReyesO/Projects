@@ -1,0 +1,81 @@
+﻿/*********==========Tablas con divs*/
+.div-table {
+    display: table !important;
+    width: 100%;
+    margin: 20px 0;
+    padding: 0;
+    background-color: #fff;
+    height: auto !important;
+}
+
+.div-table-row {
+    display: table-row !important;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    height: 40px;
+    line-height: 40px;
+}
+
+    .div-table-row:hover {
+        background-color: #F5F5F5;
+    }
+
+    .div-table-row .div-table-cell:first-child {
+        border-left: 1px solid #E1E1E1;
+    }
+
+.div-table-cell {
+    display: table-cell !important;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #E1E1E1;
+    border-right: 1px solid #E1E1E1;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    text-align: center;
+}
+
+.div-table-head,
+.div-table-head:hover {
+    background-color: #DFF0D8;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+    .div-table-head .div-table-cell {
+        border-top: 1px solid #E1E1E1 !important;
+    }
+
+.div-table-row-list .div-table-cell {
+    border: none;
+}
+
+.div-table-row-list {
+    border: none;
+}
+
+    .div-table-row-list .div-table-cell:first-child {
+        border-left: none;
+    }
+
+/*********==========Contenedor usuario*/
+
+.foto, .tabla {
+    display: inline-block;
+    margin: 5px;
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+}
+
+.tabla {
+    margin: 5px;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}

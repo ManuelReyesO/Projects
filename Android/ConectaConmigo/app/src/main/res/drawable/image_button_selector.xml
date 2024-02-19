@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true"
+        android:state_pressed="true">
+        <layer-list>
+            <!-- Fondo blanco del botón -->
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="#BCFFFFFF" />
+                    <corners android:radius="120dp" />
+                </shape>
+            </item>
+
+            <!-- Sombreado en 3D -->
+            <item android:right="25dp" android:left="25dp" android:top="20dp" android:bottom="20dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="#ffffff" />
+                    <corners android:radius="100dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_enabled="true"
+        android:state_pressed="false">
+        <layer-list >
+            <!-- Fondo blanco del botón -->
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="#ffffff" />
+                    <corners android:radius="120dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

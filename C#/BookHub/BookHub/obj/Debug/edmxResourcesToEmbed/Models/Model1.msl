@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BibliotecaModelStoreContainer" CdmEntityContainer="BibliotecaContext">
+    <EntitySetMapping Name="carritoPrestamoes">
+      <EntityTypeMapping TypeName="BibliotecaModel.carritoPrestamo">
+        <MappingFragment StoreEntitySet="carritoPrestamo">
+          <ScalarProperty Name="idCarritoPrestamo" ColumnName="idCarritoPrestamo" />
+          <ScalarProperty Name="fechaPrestamo" ColumnName="fechaPrestamo" />
+          <ScalarProperty Name="fechaEntrega" ColumnName="fechaEntrega" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="idTipoPrestamo" ColumnName="idTipoPrestamo" />
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="idLibro" ColumnName="idLibro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="carritoVentas">
+      <EntityTypeMapping TypeName="BibliotecaModel.carritoVenta">
+        <MappingFragment StoreEntitySet="carritoVenta">
+          <ScalarProperty Name="idCarritoVenta" ColumnName="idCarritoVenta" />
+          <ScalarProperty Name="fechaVenta" ColumnName="fechaVenta" />
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="idLibro" ColumnName="idLibro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Checadas">
+      <EntityTypeMapping TypeName="BibliotecaModel.Checada">
+        <MappingFragment StoreEntitySet="Checadas">
+          <ScalarProperty Name="idChecada" ColumnName="idChecada" />
+          <ScalarProperty Name="entradaChecada" ColumnName="entradaChecada" />
+          <ScalarProperty Name="salidaChecada" ColumnName="salidaChecada" />
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="fecha_es" ColumnName="fecha_es" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clientes">
+      <EntityTypeMapping TypeName="BibliotecaModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="nombresCliente" ColumnName="nombresCliente" />
+          <ScalarProperty Name="apellidoPCliente" ColumnName="apellidoPCliente" />
+          <ScalarProperty Name="apellidoMCliente" ColumnName="apellidoMCliente" />
+          <ScalarProperty Name="fechaNacimientoCliente" ColumnName="fechaNacimientoCliente" />
+          <ScalarProperty Name="telefonoCliente" ColumnName="telefonoCliente" />
+          <ScalarProperty Name="direccionCliente" ColumnName="direccionCliente" />
+          <ScalarProperty Name="usuarioCliente" ColumnName="usuarioCliente" />
+          <ScalarProperty Name="contraseñaCliente" ColumnName="contraseñaCliente" />
+          <ScalarProperty Name="Activos" ColumnName="Activos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetallePrestamoes">
+      <EntityTypeMapping TypeName="BibliotecaModel.DetallePrestamo">
+        <MappingFragment StoreEntitySet="DetallePrestamo">
+          <ScalarProperty Name="idDetallePrestamo" ColumnName="idDetallePrestamo" />
+          <ScalarProperty Name="idPrestamo" ColumnName="idPrestamo" />
+          <ScalarProperty Name="idLibro" ColumnName="idLibro" />
+          <ScalarProperty Name="Activos" ColumnName="Activos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleVentas">
+      <EntityTypeMapping TypeName="BibliotecaModel.DetalleVenta">
+        <MappingFragment StoreEntitySet="DetalleVenta">
+          <ScalarProperty Name="idDetalleVenta" ColumnName="idDetalleVenta" />
+          <ScalarProperty Name="idVenta" ColumnName="idVenta" />
+          <ScalarProperty Name="idLibro" ColumnName="idLibro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Editorials">
+      <EntityTypeMapping TypeName="BibliotecaModel.Editorial">
+        <MappingFragment StoreEntitySet="Editorial">
+          <ScalarProperty Name="idEditorial" ColumnName="idEditorial" />
+          <ScalarProperty Name="nombreEditorial" ColumnName="nombreEditorial" />
+          <ScalarProperty Name="Activos" ColumnName="Activos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empleadoes">
+      <EntityTypeMapping TypeName="BibliotecaModel.Empleado">
+        <MappingFragment StoreEntitySet="Empleado">
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="nombresEmpleado" ColumnName="nombresEmpleado" />
+          <ScalarProperty Name="apellidoPEmpleado" ColumnName="apellidoPEmpleado" />
+          <ScalarProperty Name="apellidoMEmpleado" ColumnName="apellidoMEmpleado" />
+          <ScalarProperty Name="direccionEmpleado" ColumnName="direccionEmpleado" />
+          <ScalarProperty Name="telefonoEmpleado" ColumnName="telefonoEmpleado" />
+          <ScalarProperty Name="idHorario" ColumnName="idHorario" />
+          <ScalarProperty Name="Activos" ColumnName="Activos" />
+          <ScalarProperty Name="usuarioEmp" ColumnName="usuarioEmp" />
+          <ScalarProperty Name="contraseñaEmp" ColumnName="contraseñaEmp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Horarios">
+      <EntityTypeMapping TypeName="BibliotecaModel.Horario">
+        <MappingFragment StoreEntitySet="Horarios">
+          <ScalarProperty Name="idHorario" ColumnName="idHorario" />
+          <ScalarProperty Name="tipoHorario" ColumnName="tipoHorario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Libroes">
+      <EntityTypeMapping TypeName="BibliotecaModel.Libro">
+        <MappingFragment StoreEntitySet="Libro">
+          <ScalarProperty Name="idLibro" ColumnName="idLibro" />
+          <ScalarProperty Name="tituloLibro" ColumnName="tituloLibro" />
+          <ScalarProperty Name="edicionLibro" ColumnName="edicionLibro" />
+          <ScalarProperty Name="fechaLanzamiento" ColumnName="fechaLanzamiento" />
+          <ScalarProperty Name="nombreAutor" ColumnName="nombreAutor" />
+          <ScalarProperty Name="idEditorial" ColumnName="idEditorial" />
+          <ScalarProperty Name="idPais" ColumnName="idPais" />
+          <ScalarProperty Name="idTipoLibro" ColumnName="idTipoLibro" />
+          <ScalarProperty Name="imagenLib" ColumnName="imagenLib" />
+          <ScalarProperty Name="Activos" ColumnName="Activos" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pais">
+      <EntityTypeMapping TypeName="BibliotecaModel.Pai">
+        <MappingFragment StoreEntitySet="Pais">
+          <ScalarProperty Name="idPais" ColumnName="idPais" />
+          <ScalarProperty Name="nombrePais" ColumnName="nombrePais" />
+          <ScalarProperty Name="Activos" ColumnName="Activos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prestamoes">
+      <EntityTypeMapping TypeName="BibliotecaModel.Prestamo">
+        <MappingFragment StoreEntitySet="Prestamo">
+          <ScalarProperty Name="idPrestamo" ColumnName="idPrestamo" />
+          <ScalarProperty Name="fechaPrestamo" ColumnName="fechaPrestamo" />
+          <ScalarProperty Name="fechaEntrega" ColumnName="fechaEntrega" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="idTipoPrestamo" ColumnName="idTipoPrestamo" />
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="Activos" ColumnName="Activos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoLibroes">
+      <EntityTypeMapping TypeName="BibliotecaModel.TipoLibro">
+        <MappingFragment StoreEntitySet="TipoLibro">
+          <ScalarProperty Name="idTipoLibro" ColumnName="idTipoLibro" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="imagenTL" ColumnName="imagenTL" />
+          <ScalarProperty Name="Activos" ColumnName="Activos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoPrestamoes">
+      <EntityTypeMapping TypeName="BibliotecaModel.TipoPrestamo">
+        <MappingFragment StoreEntitySet="TipoPrestamo">
+          <ScalarProperty Name="idTipoPrestamo" ColumnName="idTipoPrestamo" />
+          <ScalarProperty Name="ModeloPrestamo" ColumnName="ModeloPrestamo" />
+          <ScalarProperty Name="Activos" ColumnName="Activos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ventas">
+      <EntityTypeMapping TypeName="BibliotecaModel.Venta">
+        <MappingFragment StoreEntitySet="Ventas">
+          <ScalarProperty Name="idVenta" ColumnName="idVenta" />
+          <ScalarProperty Name="fechaVenta" ColumnName="fechaVenta" />
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

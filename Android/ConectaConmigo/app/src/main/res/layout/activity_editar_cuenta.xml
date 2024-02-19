@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F16A6A"
+    tools:context=".Cuentas.EditarCuenta">
+
+    <TextView
+        android:id="@+id/tittleMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Cuenta"
+        android:textColor="#FFFFFF"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewMenu"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/corner_radius_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tittleMenu" />
+
+    <View
+        android:id="@+id/bottomViewMenu"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#F16A6A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/subtittleEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Editar perfil."
+        android:textColor="#F16A6A"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/viewMenu" />
+
+    <TextView
+        android:id="@+id/nomEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:text="Nombre"
+        android:textColor="#F16A6A"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/viewMenu"
+        app:layout_constraintTop_toBottomOf="@id/subtittleEdit" />
+
+
+    <EditText
+        android:id="@+id/editTNom"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="@id/viewMenu"
+        app:layout_constraintTop_toBottomOf="@id/nomEdit" />
+
+    <TextView
+        android:id="@+id/apeEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Apellidos"
+        android:textColor="#F16A6A"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/viewMenu"
+        app:layout_constraintTop_toBottomOf="@id/editTNom" />
+
+
+    <EditText
+        android:id="@+id/editTApe"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="@id/viewMenu"
+        app:layout_constraintTop_toBottomOf="@id/apeEdit" />
+
+    <TextView
+        android:id="@+id/ageEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Edad"
+        android:textColor="#F16A6A"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/viewMenu"
+        app:layout_constraintTop_toBottomOf="@id/editTApe" />
+
+    <EditText
+        android:id="@+id/editTAge"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="@id/viewMenu"
+        app:layout_constraintTop_toBottomOf="@id/ageEdit" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSave"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="260dp"
+        android:text="Guardar cámbios"
+        android:background="@drawable/button_selector"
+        android:textColor="#F16A6A"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/viewMenu"
+        app:layout_constraintTop_toBottomOf="@id/editTAge"
+        app:layout_constraintEnd_toEndOf="@id/viewMenu"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

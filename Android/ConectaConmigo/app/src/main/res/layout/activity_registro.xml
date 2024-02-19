@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Inicio.Registro">
+
+    <TextView
+        android:id="@+id/tituloInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="¡Únete a nosotros!"
+        android:textColor="#F16A6A"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/icono"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tituloInicio" />
+
+    <TextView
+        android:id="@+id/subT1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Creación de cuenta"
+        android:textColor="#F16A6A"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
+    <TextView
+        android:id="@+id/subT2"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Rellena los espacios para\n porder registrarte correctamente"
+        android:textColor="#F16A6A"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subT1" />
+
+    <TextView
+        android:id="@+id/correo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correo"
+        android:textColor="#F16A6A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="@+id/subT2"
+        app:layout_constraintTop_toBottomOf="@+id/subT2" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edTC"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:background="#FFEBEB"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:textColor="#F16A6A"
+        app:layout_constraintStart_toStartOf="@id/correo"
+        app:layout_constraintTop_toBottomOf="@id/correo" />
+
+    <TextView
+        android:id="@+id/pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Contraseña"
+        android:textColor="#F16A6A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/edTC"
+        app:layout_constraintTop_toBottomOf="@id/edTC" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edTP"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:background="#FFEBEB"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:textColor="#F16A6A"
+        app:layout_constraintStart_toStartOf="@id/pass"
+        app:layout_constraintTop_toBottomOf="@id/pass" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnREG2"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="128dp"
+        android:background="@drawable/button_selector"
+        android:text="CREAR CUENTA"
+        android:textColor="#F16A6A"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edTP" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

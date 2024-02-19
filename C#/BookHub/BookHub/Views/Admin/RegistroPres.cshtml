@@ -1,0 +1,164 @@
+﻿
+@{
+    ViewBag.Title = "RegistroPres";
+    Layout = "~/Views/Shared/AdminView.cshtml";
+}
+
+<head>
+    <title>Prestamos</title>
+</head>
+<body>
+    <script>
+        var UrlGuardarPres = '@Url.Action("guardarPres", "Admin")'
+    </script>
+    <script src="~/Scripts/js_libros.js"></script>
+
+    <div class="container-fluid">
+        <div class="container-flat-form">
+            <div class="title-flat-form title-flat-blue">Registrar nuevo prestamo</div>
+            <form autocomplete="off">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2" style="width: 800px; margin: 0 auto;">
+                        <div class="group-material">
+                            @if (ViewBag.Prestamo != null)
+                            {
+                                string fecha = @ViewBag.Prestamo.fechaPrestamo.ToString("yyyy-MM-dd");
+                                <input type="date" id="fechaPres" class="material-control tooltips-general" required="" data-toggle="tooltip" value="@fecha">
+                            }
+                            else
+                            {
+                                <input type="date" id="fechaPres" class="material-control tooltips-general" required="" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Fecha del prestamo</label>
+                        </div>
+                        <div class="group-material">
+                            @if (ViewBag.Prestamo != null)
+                            {
+                                string fecha = @ViewBag.Prestamo.fechaEntrega.ToString("yyyy-MM-dd");
+                                <input type="date" id="fechaEnt" class="material-control tooltips-general" required="" data-toggle="tooltip" value="@fecha">
+                            }
+                            else
+                            {
+                                <input type="date" id="fechaEnt" class="material-control tooltips-general" required="" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Fecha de entrega</label>
+                        </div>
+
+                        <label>Cliente</label>
+                        <div class="group-material">
+                            @if (ViewBag.Prestamo != null)
+                            {
+                                <select name="Cliente" id="cliente" class="material-control tooltips-general" required="" data-toggle="tooltip" style="margin-top: 5px;">
+                                    <option selected hidden>@ViewBag.Cliente.nombresCliente</option>
+                                    @foreach (var item in ViewBag.clint)
+                                    {
+                                        <option>@item</option>
+                                    }
+                                </select>
+                            }
+                            else
+                            {
+                                <select name="Cliente" id="cliente" class="material-control tooltips-general" required="" data-toggle="tooltip" style="margin-top: 5px;">
+                                    <option selected disabled>- Seleccione un nombre de cliente -</option>
+                                    @foreach (var item in ViewBag.clint)
+                                    {
+                                        <option>@item</option>
+                                    }
+                                </select>
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                        </div>
+
+                        <label>Modelo de prestamo</label>
+                        <div class="group-material">
+                            @if (ViewBag.Prestamo != null)
+                            {
+                                <select name="TPrestamo" id="tpres" class="material-control tooltips-general" required="" data-toggle="tooltip" style="margin-top: 5px;">
+                                    <option selected hidden>@ViewBag.TipoPrestamo.ModeloPrestamo</option>
+                                    @foreach (var item in ViewBag.tpres)
+                                    {
+                                        <option>@item</option>
+                                    }
+                                </select>
+                            }
+                            else
+                            {
+                                <select name="TPrestamo" id="tpres" class="material-control tooltips-general" required="" data-toggle="tooltip" style="margin-top: 5px;">
+                                    <option selected disabled>- Seleccione un modelo de prestamo -</option>
+                                    @foreach (var item in ViewBag.tpres)
+                                    {
+                                        <option>@item</option>
+                                    }
+                                </select>
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                        </div>
+
+                        <label>Empleado</label>
+                        <div class="group-material">
+                            @if (ViewBag.Prestamo != null)
+                            {
+                                <select name="Empleado" id="emp" class="material-control tooltips-general" required="" data-toggle="tooltip" style="margin-top: 5px;">
+                                    <option selected hidden>@ViewBag.Empleado.nombresEmpleado</option>
+                                    @foreach (var item in ViewBag.emp)
+                                    {
+                                        <option>@item</option>
+                                    }
+                                </select>
+                            }
+                            else
+                            {
+                                <select name="Empleado" id="emp" class="material-control tooltips-general" required="" data-toggle="tooltip" style="margin-top: 5px;">
+                                    <option selected disabled>- Seleccione el empleado responsable -</option>
+                                    @foreach (var item in ViewBag.emp)
+                                    {
+                                        <option>@item</option>
+                                    }
+                                </select>
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                        </div>
+
+                        <label>Libro</label>
+                        <div class="group-material">
+                            @if (ViewBag.Prestamo != null)
+                            {
+                                <select name="Libro" id="lib" class="material-control tooltips-general" required="" data-toggle="tooltip" style="margin-top: 5px;">
+                                    <option selected hidden>@ViewBag.Libro.tituloLibro</option>
+                                    @foreach (var item in ViewBag.lib)
+                                    {
+                                        <option>@item</option>
+                                    }
+                                </select>
+                            }
+                            else
+                            {
+                                <select name="Libro" id="lib" class="material-control tooltips-general" required="" data-toggle="tooltip" style="margin-top: 5px;">
+                                    <option selected disabled>- Seleccione el libro -</option>
+                                    @foreach (var item in ViewBag.lib)
+                                    {
+                                        <option>@item</option>
+                                    }
+                                </select>
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                        </div>
+                        <p class="text-center">
+                            <a href="javascript:guardarPres()" class="btn btn-outline-success">Guardar</a>
+                            <a href="~/admin/ListaPrestamo" class="btn btn-outline-dark">Regresar</a>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+

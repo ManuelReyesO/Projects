@@ -1,0 +1,99 @@
+﻿
+@{
+    ViewBag.Title = "Reportes";
+    Layout = "~/Views/Shared/AdminView.cshtml";
+}
+
+<head>
+    <title>Reportes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Shortcut Icon" type="image/x-icon" href="assets/icons/book.ico" />
+    <link rel="stylesheet" href="~/Content/HomePage/css/checadas.css">
+</head>
+<body>
+    <script src="~/Scripts/js_personal.js"></script>
+    <script>
+        var Urlfechas = '@Url.Action("fechas", "Admin")'
+    </script>
+
+    <div class="body" id="fecha" style="min-height: 100px;" >
+        <div class="card-container">
+            <h2 style="color:darkgrey">Reportes</h2>
+            <h5 style="color:darkgrey">Año</h5>
+            <input type="month" class="input" id="año">
+            <br><br>
+            <div class="buttons">
+                <a href="javascript:fechas()" class="primary" id="asist1">Buscar</a>
+            </div>
+            <div class="skills">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="repo">
+        <h2 class="text-center all-tittles" style="clear: both; margin: 25px 0;">Reportes</h2>
+        <br>
+        <br>
+        <div class="div-table" style="margin:0 !important;">
+            <h4>Prestamos</h4>
+            <br><br>
+            <h5>Mes: @ViewBag.Mes</h5>
+            <h5>Año: @ViewBag.Año</h5>
+            <br>
+            <div class="div-table-row div-table-header" style="background-color:#DFF0D8; font-weight:bold;">
+                <div class="div-table-cell">Fecha del prestamo</div>
+                <div class="div-table-cell">Fecha de entrega</div>
+                <div class="div-table-cell">Nombre del cliente</div>
+                <div class="div-table-cell">Modelo de prestamo</div>
+                <div class="div-table-cell">Nombre del Empleado</div>
+                <div class="div-table-cell">Nombre del libro</div>
+            </div>
+
+            @foreach (var item in Model.DetPre)
+            {
+                if ((item.Prestamo.fechaPrestamo).Month == ViewBag.MesNum)
+                {
+                    <div class="div-table-row div-table-row-list" id="fila-item.@item.idPrestamo">
+                        <div class="div-table-cell">@item.Prestamo.fechaPrestamo.ToString("yyyy-MM-dd")</div>
+                        <div class="div-table-cell">@item.Prestamo.fechaEntrega.ToString("yyyy-MM-dd")</div>
+                        <div class="div-table-cell">@item.Prestamo.Cliente.nombresCliente @item.Prestamo.Cliente.apellidoPCliente @item.Prestamo.Cliente.apellidoMCliente</div>
+                        <div class="div-table-cell">@item.Prestamo.TipoPrestamo.ModeloPrestamo</div>
+                        <div class="div-table-cell">@item.Prestamo.Empleado.nombresEmpleado @item.Prestamo.Empleado.apellidoPEmpleado @item.Prestamo.Empleado.apellidoMEmpleado</div>
+                        <div class="div-table-cell">@item.Libro.tituloLibro</div>
+                    </div>
+                }
+            }
+
+        </div>
+
+        <div class="div-table" style="margin:0 !important;">
+            <br><br>
+            <h4>Ventas</h4>
+            <br>
+            <h5>Mes: @ViewBag.Mes</h5>
+            <h5>Año: @ViewBag.Año</h5>
+            <br>
+            <div class="div-table-row div-table-header" style="background-color:#DFF0D8; font-weight:bold;">
+                <div class="div-table-cell">Fecha del prestamo</div>
+                <div class="div-table-cell">Nombre del cliente</div>
+                <div class="div-table-cell">Nombre del Empleado</div>
+                <div class="div-table-cell">Nombre del libro</div>
+            </div>
+
+            @foreach (var item in Model.DetVent)
+            {
+                if ((item.Venta.fechaVenta).Month == ViewBag.MesNum)
+                {
+                    <div class="div-table-row div-table-row-list" id="fila-item.@item.idVenta">
+                        <div class="div-table-cell">@item.Venta.fechaVenta.ToString("yyyy-MM-dd")</div>
+                        <div class="div-table-cell">@item.Venta.Cliente.nombresCliente @item.Venta.Cliente.apellidoPCliente @item.Venta.Cliente.apellidoMCliente</div>
+                        <div class="div-table-cell">@item.Venta.Empleado.nombresEmpleado @item.Venta.Empleado.apellidoPEmpleado @item.Venta.Empleado.apellidoMEmpleado</div>
+                        <div class="div-table-cell">@item.Libro.tituloLibro</div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+
+</body>

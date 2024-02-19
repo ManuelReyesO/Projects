@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main">
+
+    <TextView
+        android:id="@+id/subT1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="225dp"
+        android:text="¿Has jugado con nosotros antes?"
+        android:textColor="#F16A6A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subT2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="¡Te estamos esperando!"
+        android:textColor="#F16A6A"
+        android:textSize="15sp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subT1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnIS"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:background="@drawable/button_selector"
+        android:layout_marginTop="20dp"
+        android:text="INICIAR SESIÓN"
+        android:textStyle="bold"
+        android:textColor="#F16A6A"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subT2" />
+
+    <TextView
+        android:id="@+id/subT3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Es tu primera vez aquí?"
+        android:layout_marginTop="100dp"
+        android:textColor="#F16A6A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnIS" />
+
+    <TextView
+        android:id="@+id/subT4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:gravity="center"
+        android:text="¡Unete a nosotros!"
+        android:textColor="#F16A6A"
+        android:textSize="15sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subT3" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnREG"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_selector"
+        android:text="REGISTRARSE"
+        android:textColor="#F16A6A"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subT4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

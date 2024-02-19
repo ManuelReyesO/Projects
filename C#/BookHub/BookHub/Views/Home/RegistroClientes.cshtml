@@ -1,0 +1,161 @@
+﻿<style>
+    #seccion {
+        display: none;
+    }
+</style>
+
+<head>
+    <title>Personal administrativo</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="../Content/HomePage/css/sweet-alert.css">
+    <link rel="stylesheet" href="../Content/HomePage/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="../Content/HomePage/css/normalize.css">
+    <link rel="stylesheet" href="../Content/HomePage/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Content/HomePage/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="../Content/HomePage/css/style1.css">
+    <link href="../Content/HomePage/css/styles.css" rel="stylesheet" />
+
+</head>
+<body>
+    <script>
+        var UrlGuardarClint = '@Url.Action("guardarClint","Home")'
+    </script>
+    <script src="~/Scripts/js_clientes.js"></script>
+    <div class="container-fluid">
+        <div class="container-flat-form">
+            <div class="title-flat-form title-flat-blue">Registro de información de usuarios</div>
+            <form autocomplete="off">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                        <div class="group-material">
+                            @if (ViewBag.Cliente != null)
+                            {
+                                <input type="text" id="nombreClint" class="material-control tooltips-general" required="" data-toggle="tooltip" value="@ViewBag.Cliente.nombresCliente">
+                            }
+                            else
+                            {
+                                <input type="text" id="nombreClint" class="material-control tooltips-general" required="" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Nombres</label>
+                        </div>
+                        <div class="group-material">
+                            @if (ViewBag.Cliente != null)
+                            {
+                                <input type="text" id="apePClint" class="material-control tooltips-general" required="" data-toggle="tooltip" value="@ViewBag.Cliente.apellidoPCliente">
+                            }
+                            else
+                            {
+                                <input type="text" id="apePClint" class="material-control tooltips-general" required="" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Apellido Paterno</label>
+                        </div>
+                        <div class="group-material">
+                            @if (ViewBag.Cliente != null)
+                            {
+                                <input type="text" id="apeMClint" class="material-control tooltips-general" required="" data-toggle="tooltip" value="@ViewBag.Cliente.apellidoMCliente">
+                            }
+                            else
+                            {
+                                <input type="text" id="apeMClint" class="material-control tooltips-general" required="" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Apellido Materno</label>
+                        </div>
+                        <div class="group-material">
+                            @if (ViewBag.Cliente != null)
+                            {
+                                string fecha = @ViewBag.Cliente.fechaNacimientoCliente.ToString("yyyy-MM-dd");
+
+                                <input type="date" id="fechaClint" class="material-control tooltips-general" required="" data-toggle="tooltip" value="@fecha">
+                            }
+                            else
+                            {
+                                <input type="date" id="fechaClint" class="material-control tooltips-general" required="" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Fecha de nacimiento</label>
+                        </div>
+                        <div class="group-material">
+                            @if (ViewBag.Cliente != null)
+                            {
+                                <input type="text" id="dirClint" class="material-control tooltips-general" required="" data-toggle="tooltip" value="@ViewBag.Cliente.direccionCliente">
+                            }
+                            else
+                            {
+                                <input type="text" id="dirClint" class="material-control tooltips-general" required="" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Dirección</label>
+                        </div>
+                        <div class="group-material">
+                            @if (ViewBag.Cliente != null)
+                            {
+                                <input type="text" id="telClint" class="material-control tooltips-general" required="" data-toggle="tooltip" value="@ViewBag.Cliente.telefonoCliente">
+                            }
+                            else
+                            {
+                                <input type="text" id="telClint" class="material-control tooltips-general" required="" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Teléfono</label>
+                        </div>
+                        <div class="group-material">
+                            @if (ViewBag.Cliente != null)
+                            {
+                                <input type="text" id="userClint" class="material-control tooltips-general" required="" data-toggle="tooltip" value="@ViewBag.Cliente.usuarioCliente">
+                            }
+                            else
+                            {
+                                <input type="text" id="userClint" class="material-control tooltips-general" required="" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Usuario</label>
+                        </div>
+                        <div class="group-material">
+                            @if (ViewBag.Cliente != null)
+                            {
+                                <input type="text" id="passClint" class="material-control tooltips-general" required="" data-toggle="tooltip" value="@ViewBag.Cliente.contraseñaCliente">
+                            }
+                            else
+                            {
+                                <input type="text" id="passClint" class="material-control tooltips-general" required="" data-toggle="tooltip">
+                            }
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Contraseña</label>
+                        </div>
+                        <p class="text-center">
+                            <a href="javascript:guardarClint()" class="btn btn-primary">Guardar</a>
+                            <a href="~/home/Login" class="btn btn-outline-dark">Regresar</a>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" role="dialog" id="ModalHelp">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title text-center all-tittles">ayuda del sistema</h4>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore dignissimos qui molestias ipsum officiis unde aliquid consequatur, accusamus delectus asperiores sunt. Quibusdam veniam ipsa accusamus error. Animi mollitia corporis iusto.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="zmdi zmdi-thumb-up"></i> &nbsp; De acuerdo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

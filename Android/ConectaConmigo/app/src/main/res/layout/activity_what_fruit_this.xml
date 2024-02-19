@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Juegos.WhatFruitThis">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/timeScreen"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="#A6FFFEFE"
+        android:elevation="3dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/segundos"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginLeft="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/numero2"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/titleSounds"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/titlebar"
+        android:gravity="center"
+        android:text="¿Qué fruta es?"
+        android:textColor="#ffffff"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fruit1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleSounds"
+        app:layout_constraintEnd_toStartOf="@id/fruit2"
+        >
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fruit2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintStart_toEndOf="@id/fruit1"
+        app:layout_constraintTop_toTopOf="@id/fruit1"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fruit3"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fruit1"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomSounds">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/answerFruit"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <View
+        android:id="@+id/bottomSounds"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#F16A6A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <FrameLayout
+        android:id="@+id/Calificacion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="#A6FFFEFE"
+        android:elevation="0dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="325dp"
+            android:layout_height="325dp"
+            app:cardBackgroundColor="#ffff"
+            app:cardCornerRadius="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="255dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:cardBackgroundColor="#F16A6A"
+            app:cardCornerRadius="50dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="268dp">
+
+            <LinearLayout
+                android:id="@+id/confettiLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/star1"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/calestb"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/star2"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/calestb"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/star3"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/calestb"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Nivel completado"
+                        android:textSize="30dp"
+                        android:textColor="#ffff"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnStars"
+                        android:layout_width="200dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/button_selector"
+                        android:text="Continuar"
+                        android:textColor="#F16A6A"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
